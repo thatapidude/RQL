@@ -1,0 +1,25 @@
+r.table('collection').merge(function(collection) {
+    return {
+      provider_ids: r.table('providers').getAll(
+        r.args(
+          collection('provider_ids')
+        )
+      ).withFields(
+        ['id','title','description','created_timestamp','updated_timestamp']
+      ).coerceTo('array'),
+      asset_ids: r.table('assets').getAll(
+        r.args(
+          collection('asset_ids')
+        )
+      ).withFields(
+        ['id','title']
+      ).coerceTo('array'),
+      steps: r.table('steps').getAll(
+        r.args(
+          collection('steps')
+        )        
+      ).withFields(
+        ['id','title']
+      ).coerceTo('array')
+    }
+}).slice(0,10).limit(10)
