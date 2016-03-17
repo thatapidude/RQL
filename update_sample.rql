@@ -1,0 +1,25 @@
+r.table('users').get(
+	'10ea03da-ec76-11e5-9ce9-5e5517507c66'
+).update(
+	{
+		'first_name': 'Don',
+		'last_name': 'Draper'
+	}
+)
+
+r.table('geo').get(
+	1
+).update(
+	{
+		'latitude': 3,
+		'longitude': 5.5
+	}		
+)
+
+r.table('auth').get(
+	5
+).update(
+	{
+		'password': '0f115374',			
+	}
+)
