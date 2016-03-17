@@ -1,0 +1,3 @@
+r.table('users').get(
+	'10ea03da-ec76-11e5-9ce9-5e5517507c66'
+).delete().run(conn)

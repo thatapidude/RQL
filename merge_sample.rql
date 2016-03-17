@@ -22,4 +22,4 @@ r.table('collection').merge(function(collection) {
         ['id','title']
       ).coerceTo('array')
     }
-}).slice(0,10).limit(10)
+}).slice(0,10).limit(10).run(conn)

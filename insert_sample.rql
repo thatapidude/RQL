@@ -19,7 +19,7 @@ r.table('users').insert(
 			'auth_data': 3
 		}
 	]
-)
+).run(conn)
 
 r.table('geo').insert(
 	[
@@ -34,7 +34,7 @@ r.table('geo').insert(
 			'longitude': 13
 		}
 	]
-)
+).run(conn)
 
 r.table('auth').insert(
 	[
@@ -47,4 +47,4 @@ r.table('auth').insert(
 			'password': '0f914374',			
 		}
 	]
-)
+).run(conn)
